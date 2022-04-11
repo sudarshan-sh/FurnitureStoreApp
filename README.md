@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+#   Furniture Store App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+*   It is a React application that lists the furnitures of different categories.
 
-## Available Scripts
+*   Customers can customize the furnitures based on filters provided.
 
-In the project directory, you can run:
+##  Functional
 
-### `npm start`
+*   Furnitures are being categorized into various fields like- All, Office, Living Room, Kitchen, Bedroom, Dining & Kids.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+*   Other categories are companies/brands, colors, price range, etc.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+*   Products can also be sorted by- lowest to highest price & vice-versa, alphabetical order and reverse order as well.
 
-### `npm test`
+*   After selecting any product, the app redirects to details of that product like image, name, received stars, customer reviews, description, availability, brand name.
+    
+    *   Customer then can select the number of items of that particluar product he/she wants.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    *   After that, however, the selected product(s) will be adding to the cart.
 
-### `npm run build`
+*   Cart shows the number of different items selected by the customer along with price, quantity and subtotal mentioned.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    *   Later, the order total of all products would be generated, from there the customer would redirect to checkout page for the payment.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+*   Checkout page would be visible only when user is logged in or authenticated.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+*   On checkout page, customer has to fill the valid card details like Card no.- 4242 4242 4242 4242 (Visa card), is provided by the stripe for testing purpose, then only he/she can pay the amount otherwise not proceeded.
 
-### `npm run eject`
+*   If payment would be successful, the customer would receive a success message and he/she can check the stripe dashboard for the transaction he has done.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    *   Later, customer would navigate to home page automatically. 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+##  Technical
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+*   This application is built on **ReactJS** in which user has to be logged in to purchase the furniture for which a JavaScript based library is used i.e... **Auth0 React SDK** for implementing authentication.
 
-## Learn More
+*  Auth0 React SDK has **useAuth0** hook which has been used to access authentication state (isLoading, isAuthenticated and user) and authentication methods (loginWithRedirect and logout).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+*   For payment process and to collect online payments, React Stripe.js has been used.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+*   When customer pays the amount, so to connect with the stripe, a serverless function is required to create payment intent which returns the client secret key which would be used on client side to tokenize payment information.
 
-### Code Splitting
+    *   On serverless function the data like total amount, shipping fee, etc. would be posted through axios or any other library. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+*   netlify.toml file tells netlify that where the serverless function is located. 
 
-### Analyzing the Bundle Size
+*   Other external libraries/packages/modules used in this application are- axios, dotenv, react-icons, react-router-dom & netlify.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+*  Source of data -
 
-### Making a Progressive Web App
+    Products API - https://course-api.com/react-store-products
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    Single Product API - https://course-api.com/react-store-single-product?id=
