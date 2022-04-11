@@ -6,7 +6,11 @@
 
 ##  Images 
 
+### Image -1
+
 ![Furniture Store -1](https://github.com/sudarshan-sh/FurnitureStoreApp/blob/main/images/Screenshot%20from%202022-04-11%2018-00-11.png)
+
+### Image -2
 
 ![Furniture Store -2](https://github.com/sudarshan-sh/FurnitureStoreApp/blob/main/images/Screenshot%20from%202022-04-11%2018-00-45.png)
 
