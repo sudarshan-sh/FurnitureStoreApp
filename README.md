@@ -6,6 +6,28 @@
 
 *   Customers can customize the furnitures based on filters provided.
 
+##  Images 
+
+### Image - 1
+
+![Furniture Store -1](https://github.com/sudarshan-sh/FurnitureStoreApp/blob/main/images/furniture-1.png)
+
+### Image - 2
+
+![Furniture Store -2](https://github.com/sudarshan-sh/FurnitureStoreApp/blob/main/images/furniture-2.png)
+
+### Image - 3
+
+![Furniture Store -2](https://github.com/sudarshan-sh/FurnitureStoreApp/blob/main/images/furniture-3.png)
+
+### Image - 4
+
+![Furniture Store -2](https://github.com/sudarshan-sh/FurnitureStoreApp/blob/main/images/furniture-4.png)
+
+### Image - 5
+
+![Furniture Store -2](https://github.com/sudarshan-sh/FurnitureStoreApp/blob/main/images/furniture-5.png)
+
 ##  Functional
 
 *   Furnitures are being categorized into various fields like- All, Office, Living Room, Kitchen, Bedroom, Dining & Kids.
