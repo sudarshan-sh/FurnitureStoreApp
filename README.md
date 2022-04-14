@@ -1,18 +1,10 @@
 #   Furniture Store App
 
+[Live Demo](https://furnitures-house.netlify.app/)
+
 *   It is a React application that lists the furnitures of different categories.
 
 *   Customers can customize the furnitures based on filters provided.
-
-##  Images 
-
-### Image -1
-
-![Furniture Store -1](https://github.com/sudarshan-sh/FurnitureStoreApp/blob/main/images/Screenshot%20from%202022-04-11%2018-00-11.png)
-
-### Image -2
-
-![Furniture Store -2](https://github.com/sudarshan-sh/FurnitureStoreApp/blob/main/images/Screenshot%20from%202022-04-11%2018-00-45.png)
 
 ##  Functional
 
